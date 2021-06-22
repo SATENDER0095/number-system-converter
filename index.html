@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+	margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+	text-align: center;
+    margin-top: 2rem;
+    background-color: #666;
+    color: #efefef;
+}
+h1{
+	margin: 1rem;
+    font-size: 3rem;
+    text-align: center;
+}
+p{
+	margin:0 1rem 2rem 1rem;
+    font-size: 1.2rem;
+}
+#demo{
+	margin: 3rem 0;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+input[type=number]{
+	margin: 0.5rem;
+    font-size: 1.1rem;
+}
+label{
+	font-size: 1.2rem;
+}
+form{
+	margin-bottom: 1rem;
+}
+li{
+	font-size: 1.2rem;
+    line-height: 1.8rem;
+    list-style-type: none;
+}
+ol{
+	margin-bottom: 1rem;
+}
+button{
+	padding: 0.8rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: #2e2f7c;
+    border-radius: 0.5rem;
+}
+</style>
+</head>
+<body>
+<h1>Number Systems </h1>
+<p>Convert decimal to Binary, Octal, Hexadecimal or any base upto 36. </p>
+<form id="frm1" >
+	<label for="fname">Your Number:</label>
+  	<input type="number" id="fname" name="fname" ><br>
+    <label for="lname">Your Base: </label>
+ 	<input type="number" id="lname" name="lname" max="36" min="2" ><br>
+</form> 
+<ol>
+	<li>For Binary use Base = 2</li>
+    <li>For Octal use Base = 8</li>
+    <li>For Hexadecimal use base = 16</li>
+    <li>For Decimal use Base = 10</li>
+</ol>
+<button onclick="myFunction()">Convert</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let x = document.getElementById("frm1");
+  let text = x.elements[0].value;
+  let num = x.elements[1].value;
+  let a = Number(text).toString(Number(num));
+  
+  document.getElementById("demo").innerHTML ="Your answer is "+ a;
+  
+}
+</script>
+
+</body>
+</html>
